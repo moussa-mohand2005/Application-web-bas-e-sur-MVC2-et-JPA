@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # E-Commerce Application - MVC2 with JPA
 
 A complete Java EE web application implementing an e-commerce platform using MVC2 architecture (Servlets + JSP/JSTL) with JPA for persistence.
@@ -381,3 +382,6 @@ If port 8080 is in use, modify WildFly's `standalone.xml` to use a different por
 
 This project is for educational purposes.
 
+=======
+# Application-web-bas-e-sur-MVC2-et-JPA
+>>>>>>> 92d8c8ae307fe5ccb7734082d974f63ca6aa7ba4
