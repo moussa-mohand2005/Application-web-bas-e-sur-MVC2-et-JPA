@@ -355,14 +355,14 @@ This project is for educational purposes.
 <img width="1920" height="958" alt="A2" src="https://github.com/user-attachments/assets/c07de490-88d7-4d3a-81fc-6ca4b27ecbf8" />
 <img width="1916" height="950" alt="A1" src="https://github.com/user-attachments/assets/2a4b031c-31eb-4fcd-b464-85761f23afed" />
 
-###Client :
+### Client :
 <img width="1920" height="960" alt="c2" src="https://github.com/user-attachments/assets/48f0f10b-73f5-4aed-bc0e-93525eaf452a" />
 <img width="1920" height="966" alt="C1" src="https://github.com/user-attachments/assets/29cf12a4-0d9b-4d58-874a-cb2499b5f7ca" />
 
 
-###Vendeur :
+### Vendeur :
 <img width="1916" height="958" alt="v2" src="https://github.com/user-attachments/assets/2ba81cf2-2019-4c62-9947-0a22b6d1bed0" />
 <img width="1918" height="958" alt="V1" src="https://github.com/user-attachments/assets/2347b867-c578-4f54-9f34-8c860e22c6c0" />
 
-###Admin :
+### Admin :
 <img width="1920" height="953" alt="AD1" src="https://github.com/user-attachments/assets/dd1da464-26d0-4c85-aa85-18d7a77067b6" />
