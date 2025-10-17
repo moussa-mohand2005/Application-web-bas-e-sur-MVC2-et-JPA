@@ -1,0 +1,4 @@
+data-source add --name=MySQLDS --jndi-name=java:jboss/datasources/MySQLDS --driver-name=mysql --connection-url=jdbc:mysql://localhost:3306/jpa?useSSL=false&serverTimezone=UTC --user-name=root --password= --use-ccm=false --max-pool-size=25 --blocking-timeout-wait-millis=5000 --enabled=true --validate-on-match=true --background-validation=false
+
+reload
+

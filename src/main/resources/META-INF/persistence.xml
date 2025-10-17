@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
+             version="3.2">
+
+    <persistence-unit name="maPU" transaction-type="JTA">
+        <jta-data-source>java:jboss/datasources/MySQLDS</jta-data-source>
+
+        <class>net.moussa.jpa.entities.Internaute</class>
+        <class>net.moussa.jpa.entities.Vitrine</class>
+        <class>net.moussa.jpa.entities.Produit</class>
+        <class>net.moussa.jpa.entities.Panier</class>
+        <class>net.moussa.jpa.entities.LignePanier</class>
+
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>

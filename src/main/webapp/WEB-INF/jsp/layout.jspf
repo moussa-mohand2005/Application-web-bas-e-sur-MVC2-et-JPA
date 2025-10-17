@@ -1,0 +1,43 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${pageTitle != null ? pageTitle : 'E-Commerce'}</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="${pageContext.request.contextPath}/produits?action=list" class="logo">E-Shop</a>
+                <div class="nav-links">
+                    <a href="${pageContext.request.contextPath}/produits?action=list">Produits</a>
+                    <a href="${pageContext.request.contextPath}/panier?action=view">Panier</a>
+                    <c:if test="${sessionScope.role == 'VENDEUR' || sessionScope.role == 'ADMIN'}">
+                        <a href="${pageContext.request.contextPath}/seller/produits">Mes Produits</a>
+                    </c:if>
+                    <c:if test="${sessionScope.role == 'ADMIN'}">
+                        <a href="${pageContext.request.contextPath}/admin/users">Utilisateurs</a>
+                    </c:if>
+                    <c:choose>
+                        <c:when test="${sessionScope.userId != null}">
+                            <span class="user-name">${sessionScope.userName}</span>
+                            <form action="${pageContext.request.contextPath}/auth?action=logout" method="post" class="logout-form">
+                                <input type="hidden" name="csrfToken" value="${sessionScope.csrfToken}">
+                                <button type="submit" class="btn-link">Déconnexion</button>
+                            </form>
+                        </c:when>
+                        <c:otherwise>
+                            <a href="${pageContext.request.contextPath}/auth?action=login">Connexion</a>
+                            <a href="${pageContext.request.contextPath}/auth?action=register">Inscription</a>
+                        </c:otherwise>
+                    </c:choose>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+
