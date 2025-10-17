@@ -337,39 +337,6 @@ All POST requests require a valid CSRF token from the session. The token is auto
 
 ## Troubleshooting
 
-### Error: "Required services that are not installed: jboss.naming.context.java.jpa"
-
-**Problem:** WildFly cannot find the datasource.
-
-**Solution:**
-1. Verify the datasource is created in WildFly:
-```bash
-cd %WILDFLY_HOME%\bin
-jboss-cli.bat --connect
-/subsystem=datasources/data-source=MySQLDS:read-resource
-```
-
-2. If the datasource doesn't exist, run the setup script:
-```bash
-jboss-cli.bat --connect --file=path\to\setup-datasource.cli
-```
-
-3. Check MySQL is running:
-```bash
-mysql -u jpauser -pjpapass jpa
-```
-
-### DataSource Not Found
-
-Ensure the MySQL datasource `java:jboss/datasources/MySQLDS` is configured in WildFly and the database is running.
-
-### Tables Not Created
-
-Check that:
-1. MySQL is running and database `jpa` exists
-2. DataSource connection is valid
-3. `persistence.xml` has correct schema generation settings
-
 ### Login Issues
 
 The default user is created on first startup. If the database is recreated, restart WildFly to trigger seed data loading.
@@ -383,5 +350,19 @@ If port 8080 is in use, modify WildFly's `standalone.xml` to use a different por
 This project is for educational purposes.
 
 =======
-# Application-web-bas-e-sur-MVC2-et-JPA
->>>>>>> 92d8c8ae307fe5ccb7734082d974f63ca6aa7ba4
+## Maquettes et interfaces finales
+### Authentification :
+<img width="1920" height="958" alt="A2" src="https://github.com/user-attachments/assets/c07de490-88d7-4d3a-81fc-6ca4b27ecbf8" />
+<img width="1916" height="950" alt="A1" src="https://github.com/user-attachments/assets/2a4b031c-31eb-4fcd-b464-85761f23afed" />
+
+###Client :
+<img width="1920" height="960" alt="c2" src="https://github.com/user-attachments/assets/48f0f10b-73f5-4aed-bc0e-93525eaf452a" />
+<img width="1920" height="966" alt="C1" src="https://github.com/user-attachments/assets/29cf12a4-0d9b-4d58-874a-cb2499b5f7ca" />
+
+
+###Vendeur :
+<img width="1916" height="958" alt="v2" src="https://github.com/user-attachments/assets/2ba81cf2-2019-4c62-9947-0a22b6d1bed0" />
+<img width="1918" height="958" alt="V1" src="https://github.com/user-attachments/assets/2347b867-c578-4f54-9f34-8c860e22c6c0" />
+
+###Admin :
+<img width="1920" height="953" alt="AD1" src="https://github.com/user-attachments/assets/dd1da464-26d0-4c85-aa85-18d7a77067b6" />
